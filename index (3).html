@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sai Velcheti | Product Manager</title>
+<meta name="description" content="Saiteja Velcheti Srinivas — Product Manager / Product Owner in financial services. Backlog, integrations, UAT, and KPIs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f4ef; --surface:#ffffff; --ink:#16181d; --muted:#5b6070; --line:#e2ded4;
+  --accent:#1f6f5c; --accent-soft:#e3efe9; --chip:#efece4;
+  --radius:14px; --max:1080px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1114; --surface:#171a1f; --ink:#ecebe6; --muted:#9aa0ad; --line:#262a31;
+    --accent:#6fd3b4; --accent-soft:#16302a; --chip:#1d2127;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1114; --surface:#171a1f; --ink:#ecebe6; --muted:#9aa0ad; --line:#262a31;
+  --accent:#6fd3b4; --accent-soft:#16302a; --chip:#1d2127;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Inter Tight",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.15;margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--bg);padding:8px 12px;border-radius:8px;z-index:100}
+.skip:focus{left:16px}
+
+/* Nav */
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600}
+.mono{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:var(--ink);color:var(--bg);font:600 14px "Fraunces",serif}
+.links{display:flex;gap:24px}
+.links a{text-decoration:none;color:var(--muted);font-weight:500;font-size:15px}
+.links a:hover{color:var(--ink)}
+.navbtns{display:flex;gap:8px}
+.icon-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:9px;height:36px;padding:0 12px;font:500 14px inherit;font-family:inherit;cursor:pointer}
+.menu-btn{display:none}
+@media (max-width:760px){
+  .links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{padding:14px 16px;border-top:1px solid var(--line)}
+  .menu-btn{display:inline-block}
+}
+
+/* Sections */
+section{padding:88px 0;border-bottom:1px solid var(--line)}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+h2{font-size:clamp(28px,4vw,40px);max-width:22ch}
+.lede{color:var(--muted);max-width:60ch;margin:16px 0 0}
+
+/* Hero */
+.hero{padding:96px 0 72px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(40px,7vw,72px);letter-spacing:-.01em}
+.hero h1 span{display:block;color:var(--muted);font-weight:500}
+.tagline{font:500 clamp(20px,2.4vw,24px)/1.35 "Fraunces",serif;margin:22px 0 14px}
+.hero p{color:var(--muted);max-width:56ch;margin:0 0 14px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{transform:translateY(-1px)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.chips li{background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:500}
+
+/* Workflow widget */
+.flow{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.flow-head{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:16px}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;background:var(--chip);padding:5px;border-radius:10px}
+.tab{border:0;background:transparent;color:var(--muted);padding:9px 4px;border-radius:7px;font:600 14px inherit;font-family:inherit;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.panel{padding:22px 2px 6px}
+.panel h3{font-size:22px;margin-bottom:8px}
+.panel p{color:var(--muted);margin:0}
+.trail{margin-top:20px;padding-top:16px;border-top:1px dashed var(--line);font-size:13px;color:var(--muted)}
+.trail b{color:var(--accent);font-weight:600}
+
+/* Strengths */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+@media (max-width:900px){.grid3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.num{font:600 13px "Inter Tight";color:var(--accent);letter-spacing:.06em}
+.card h3{font-size:20px;margin:10px 0 8px}
+.card p{color:var(--muted);margin:0;font-size:15px}
+
+/* Projects */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px}
+.filter{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:8px 14px;font:600 14px inherit;font-family:inherit;cursor:pointer}
+.filter[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.projects{display:grid;gap:16px;margin-top:24px}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:grid;grid-template-columns:220px 1fr;gap:28px}
+@media (max-width:760px){.project{grid-template-columns:1fr;gap:12px}}
+.project[hidden]{display:none}
+.p-meta{font-size:13px;color:var(--muted)}
+.p-meta strong{display:block;font:600 19px/1.3 "Fraunces",serif;color:var(--ink);margin-top:8px}
+.project h3{font-size:24px;margin-bottom:8px}
+.project p{color:var(--muted);margin:0 0 14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0 0 16px}
+.tags li{font-size:12px;font-weight:600;padding:4px 10px;border-radius:6px;background:var(--accent-soft);color:var(--accent)}
+details{border-top:1px solid var(--line);padding-top:12px}
+summary{cursor:pointer;font-weight:600;font-size:15px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:" +";color:var(--accent)}
+details[open] summary::after{content:" −"}
+details ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:15px}
+details li{margin:4px 0}
+
+/* Toolkit */
+.toolkit{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px}
+@media (max-width:700px){.toolkit{grid-template-columns:1fr}}
+.toolkit h3{font-size:18px;margin-bottom:12px}
+
+/* Experience */
+.timeline{list-style:none;padding:0;margin:40px 0 0;display:grid;gap:12px}
+.timeline li{display:grid;grid-template-columns:200px 1fr;gap:20px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 24px}
+@media (max-width:700px){.timeline li{grid-template-columns:1fr;gap:4px}}
+.timeline .org{font-weight:600}
+.timeline .role{color:var(--muted);font-size:15px}
+.edu{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px}
+@media (max-width:700px){.edu{grid-template-columns:1fr}}
+
+/* Connect + footer */
+.connect{text-align:center;border-bottom:0}
+.connect h2,.connect .lede{margin-left:auto;margin-right:auto}
+.connect .ctas{justify-content:center}
+footer{border-top:1px solid var(--line);padding:28px 0;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home"><span class="mono">SV</span><span>Saiteja Velcheti Srinivas</span></a>
+    <nav class="links" id="navlinks" aria-label="Primary">
+      <a href="#strengths">Strengths</a>
+      <a href="#projects">Projects</a>
+      <a href="#toolkit">Toolkit</a>
+      <a href="#experience">Experience</a>
+      <a href="#connect">Connect</a>
+    </nav>
+    <div class="navbtns">
+      <button class="icon-btn" id="themeBtn" type="button">Dark mode</button>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Product Management · Financial Services</span>
+      <h1>Saiteja <span>Velcheti Srinivas</span></h1>
+      <!-- EDIT: tagline is draft wording — change to your own voice -->
+      <p class="tagline">Turning complex financial workflows into products teams can ship.</p>
+      <p>Product Manager / Product Owner with 3+ years in financial services — backlog, integrations, UAT, and KPIs for banking clients and FedEx at DXC, and most recently product at Trigno Systems, an AI startup.</p>
+      <p>Before product, I took hardware from CAD design to production, including a robotic fish now in production with DRDO.</p>
+      <div class="ctas">
+        <a class="btn primary" href="#projects">Explore my work ↗</a>
+        <!-- TODO: replace with your LinkedIn URL -->
+        <a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <ul class="chips">
+        <li>Financial Services</li><li>Product Ownership</li><li>AI Products</li><li>Data Science</li>
+      </ul>
+    </div>
+
+    <div class="flow" aria-label="Product workflow">
+      <div class="flow-head"><span>Product workflow ↗</span><span>Select a stage</span></div>
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" aria-selected="true" data-stage="0">Define</button>
+        <button class="tab" role="tab" aria-selected="false" data-stage="1">Integrate</button>
+        <button class="tab" role="tab" aria-selected="false" data-stage="2">Validate</button>
+        <button class="tab" role="tab" aria-selected="false" data-stage="3">Measure</button>
+      </div>
+      <div class="panel" role="tabpanel" aria-live="polite">
+        <h3 id="stageTitle"></h3>
+        <p id="stageText"></p>
+      </div>
+      <div class="trail" id="trail"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STRENGTHS -->
+<section id="strengths">
+  <div class="wrap">
+    <span class="eyebrow">Product strengths</span>
+    <h2>Process matters. Judgment makes the difference.</h2>
+    <p class="lede">Product ownership in financial services, grounded in data science and hands-on engineering.</p>
+    <div class="grid3">
+      <article class="card"><span class="num">01</span><h3>Backlog Ownership</h3><p>Managing and prioritizing the product backlog for banking clients and FedEx.</p></article>
+      <article class="card"><span class="num">02</span><h3>Integrations</h3><p>Coordinating the integrations a financial product depends on across systems and teams.</p></article>
+      <article class="card"><span class="num">03</span><h3>UAT &amp; Release Readiness</h3><p>Running user acceptance testing so releases are verified with stakeholders before go-live.</p></article>
+      <article class="card"><span class="num">04</span><h3>KPI-Driven Decisions</h3><p>Defining and tracking KPIs to judge whether a release moved the outcome.</p></article>
+      <article class="card"><span class="num">05</span><h3>Data Science Foundation</h3><p>Post Graduate Program in Data Science (Simplilearn, in collaboration with Purdue University).</p></article>
+      <article class="card"><span class="num">06</span><h3>Hardware to Product</h3><p>Took a robotic fish from CAD design through prototype and DRDO testing to production.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <span class="eyebrow">Selected work</span>
+    <h2>The work behind the products.</h2>
+    <p class="lede">Filter by focus and expand each project to see its scope.</p>
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button class="filter" aria-pressed="true" data-filter="all">All projects</button>
+      <button class="filter" aria-pressed="false" data-filter="fin">Financial services</button>
+      <button class="filter" aria-pressed="false" data-filter="hw">Hardware</button>
+    </div>
+
+    <div class="projects">
+      <article class="project" data-cat="fin">
+        <div class="p-meta">01 / Product ownership<strong>Backlog → UAT → KPIs</strong></div>
+        <div>
+          <h3>Fleet Finance Product Ownership</h3>
+          <p>Product owner work at DXC for banking clients and FedEx.</p>
+          <ul class="tags"><li>Backlog</li><li>Integrations</li><li>UAT</li><li>KPIs</li></ul>
+          <details><summary>Explore project scope</summary>
+            <ul>
+              <li>Backlog management and prioritization</li>
+              <li>System integrations</li>
+              <li>User acceptance testing (UAT)</li>
+              <li>KPI tracking</li>
+              <!-- TODO: add outcomes/metrics you can share -->
+            </ul>
+          </details>
+        </div>
+      </article>
+
+      <article class="project" data-cat="hw">
+        <div class="p-meta">02 / Robotics<strong>CAD → Prototype → Production</strong></div>
+        <div>
+          <h3>Robotic Fish for DRDO</h3>
+          <p>Robotic fish taken from CAD design through prototype and DRDO testing; now in production with DRDO for Indian defense.</p>
+          <ul class="tags"><li>SolidWorks</li><li>AutoCAD</li><li>Fusion 360</li><li>Creo</li></ul>
+          <details><summary>Explore project scope</summary>
+            <ul>
+              <li>CAD design</li>
+              <li>Prototype build</li>
+              <li>DRDO testing</li>
+              <li>In production with DRDO</li>
+            </ul>
+          </details>
+        </div>
+      </article>
+
+      <article class="project" data-cat="hw">
+        <div class="p-meta">03 / Components<strong>Designed. Sold. Shipped.</strong></div>
+        <div>
+          <h3>Actuator &amp; Sensor Line</h3>
+          <p>An actuator and sensor product line sold to Bosch and other clients.</p>
+          <ul class="tags"><li>Actuators</li><li>Sensors</li><li>CAD</li></ul>
+          <details><summary>Explore project scope</summary>
+            <ul>
+              <li>Sold to Bosch and other clients</li>
+              <!-- TODO: add your role and scope on this line -->
+            </ul>
+          </details>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLKIT -->
+<section id="toolkit">
+  <div class="wrap">
+    <span class="eyebrow">Toolkit</span>
+    <h2>Across the product lifecycle.</h2>
+    <div class="toolkit">
+      <div class="card"><h3>Product &amp; Delivery</h3><ul class="chips"><li>Backlog Management</li><li>Integrations</li><li>UAT</li><li>KPIs</li><li>JIRA</li><li>Confluence</li><li>Figma</li></ul></div>
+      <div class="card"><h3>Data &amp; Analytics</h3><ul class="chips"><li>SQL</li><li>Power BI</li><li>Tableau</li><li>Python (analysis)</li><li>Excel</li></ul></div>
+      <div class="card"><h3>Platforms</h3><ul class="chips"><li>AWS</li><li>Azure</li><li>Salesforce</li><li>Snowflake</li><li>REST APIs</li></ul><p style="margin-top:10px">Working knowledge.</p></div>
+      <div class="card"><h3>AI Tooling</h3><ul class="chips"><li>Claude Code</li></ul><p style="margin-top:10px">For prototyping and validation.</p></div>
+      <div class="card"><h3>Engineering &amp; CAD</h3><ul class="chips"><li>SolidWorks</li><li>AutoCAD</li><li>Fusion 360</li><li>Creo</li></ul></div>
+      <div class="card"><h3>Domain</h3><ul class="chips"><li>Financial Services</li><li>Banking</li><li>Fleet Finance</li><li>AI Products</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <span class="eyebrow">Experience</span>
+    <h2>Where I've done the work.</h2>
+    <!-- TODO: add dates for each role -->
+    <ol class="timeline">
+      <li><span class="org">Trigno Systems</span><span class="role">Product Manager · AI startup · from June 2026</span></li>
+      <li><span class="org">DXC</span><span class="role">Product owner work for banking clients and FedEx; robotics &amp; CAD work</span></li>
+      <li><span class="org">McKinsey</span><span class="role">Delivery work</span></li>
+      <li><span class="org">Prescott Pharma</span><span class="role">Product Intern</span></li>
+    </ol>
+    <div class="edu">
+      <div class="card"><span class="num">EDUCATION</span><h3>MS, Engineering Management</h3><p>Northeastern University</p></div>
+      <div class="card"><span class="num">CERTIFICATION</span><h3>Post Graduate Program in Data Science</h3><p>Simplilearn, in collaboration with Purdue University</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECT -->
+<section class="connect" id="connect">
+  <div class="wrap">
+    <span class="eyebrow">Let's connect</span>
+    <h2>Clear products. Meaningful collaboration.</h2>
+    <p class="lede">Reach out to talk product management, financial services, and AI products.</p>
+    <div class="ctas">
+      <!-- TODO: replace both URLs -->
+      <a class="btn primary" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/saitejavsdevops" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn" href="https://x.com/productpilled" target="_blank" rel="noopener">@productpilled on X ↗</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Saiteja Velcheti Srinivas · Product Management</span>
+    <a href="#home">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+// Theme toggle (remembered per browser)
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  function current(){
+    var t=root.getAttribute('data-theme');
+    if(t) return t;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+  }
+  function label(){btn.textContent=current()==='dark'?'Light mode':'Dark mode';}
+  try{var saved=localStorage.getItem('theme'); if(saved) root.setAttribute('data-theme',saved);}catch(e){}
+  label();
+  btn.addEventListener('click',function(){
+    var next=current()==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+    label();
+  });
+})();
+
+// Mobile menu
+(function(){
+  var b=document.getElementById('menuBtn'), l=document.getElementById('navlinks');
+  b.addEventListener('click',function(){var o=l.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+  l.addEventListener('click',function(e){if(e.target.tagName==='A'){l.classList.remove('open');b.setAttribute('aria-expanded','false');}});
+})();
+
+// Workflow stages
+(function(){
+  var stages=[
+    {t:'Define the backlog.',d:'Translate client and business needs into a prioritized backlog the team can build against.'},
+    {t:'Connect the systems.',d:'Coordinate the integrations a financial product depends on, across systems and teams.'},
+    {t:'Validate before release.',d:'Run user acceptance testing with stakeholders so what ships is what was needed.'},
+    {t:'Measure the outcome.',d:'Track KPIs after release to see whether the product moved the result.'}
+  ];
+  var names=['Define','Integrate','Validate','Measure'];
+  var tabs=document.querySelectorAll('.tab');
+  function show(i){
+    tabs.forEach(function(t,j){t.setAttribute('aria-selected',j===i);});
+    document.getElementById('stageTitle').textContent=stages[i].t;
+    document.getElementById('stageText').textContent=stages[i].d;
+    document.getElementById('trail').innerHTML=names.map(function(n,j){return j===i?'<b>'+n+'</b>':n;}).join(' → ');
+  }
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){show(i);});});
+  show(0);
+})();
+
+// Project filters
+(function(){
+  var fs=document.querySelectorAll('.filter'), ps=document.querySelectorAll('.project');
+  fs.forEach(function(f){
+    f.addEventListener('click',function(){
+      fs.forEach(function(x){x.setAttribute('aria-pressed',x===f);});
+      var c=f.dataset.filter;
+      ps.forEach(function(p){p.hidden=!(c==='all'||p.dataset.cat===c);});
+    });
+  });
+})();
+
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
